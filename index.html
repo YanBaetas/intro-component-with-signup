@@ -23,7 +23,7 @@
   </head>
   <body>
     <main class="container">
-      <div class="wrapper">
+      <div class="wrapper wrapper-description">
         <h1>Learn to code by watching others</h1>
 
         <p class="description">
@@ -33,42 +33,59 @@
         </p>
       </div>
 
-      <div class="wrapper">
-        <p class="try-free">Try it free 7 days then $20/mo. thereafter</p>
+      <div class="wrapper wrapper-form">
+        <p class="try-free">
+          <span class="highlight">Try it free 7 days</span> then $20/mo.
+          thereafter
+        </p>
 
-        <form action="submit">
-          <label class="read-only" for="first-name">First Name</label>
-          <input
-            id="first-name"
-            name="first-name"
-            type="text"
-            placeholder="First Name"
-          />
+        <div class="form">
+          <form action="submit">
+            <label class="sr-only" for="first-name">First Name</label>
+            <input
+              id="first-name"
+              name="first-name"
+              type="text"
+              placeholder="First Name"
+            />
+            <p class="error-info">First Name cannot be empty</p>
 
-          <label class="read-only" for="last-name">Last Name</label>
-          <input name="last-name" type="text" placeholder="Last Name" />
+            <label class="sr-only" for="last-name">Last Name</label>
+            <input
+              id="last-name"
+              name="last-name"
+              type="text"
+              placeholder="Last Name"
+            />
+            <p class="error-info">Last Name cannot be empty</p>
 
-          <label class="read-only" for="email-address">First Name</label>
-          <input
-            id="email-address"
-            name="email-address"
-            type="text"
-            placeholder="Email Address"
-          />
+            <label class="sr-only" for="email-address">E-mail</label>
+            <input
+              id="email-address"
+              name="email-address"
+              type="text"
+              placeholder="Email Address"
+            />
+            <p class="error-info">Looks like this is not an e-mail</p>
 
-          <label class="read-only" for="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="text"
-            placeholder="Password"
-          />
+            <label class="sr-only" for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="text"
+              placeholder="Password"
+            />
+            <p class="error-info">Password Cannot be Empty</p>
 
-          <button type="submit">Claim your free trial</button>
-          <p class="terms">
-            By clicking the button, you are agreeing to our Terms and Services
-          </p>
-        </form>
+            <button class="submit-form" type="button">
+              Claim your free trial
+            </button>
+            <p class="terms">
+              By clicking the button, you are agreeing to our
+              <span class="highlight-terms">Terms and Services</span>
+            </p>
+          </form>
+        </div>
       </div>
     </main>
 
@@ -80,5 +97,6 @@
         >. Coded by <a href="#">Yan Baetas</a>.
       </p>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
